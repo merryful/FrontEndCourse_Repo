@@ -30,7 +30,7 @@ Styling Suggestions:
 
 ###Technical Requirements
 
-- Link the navigation to the sections of the page using the 'a' tag and id's
+- Link the navigation to the sections of the page using the 'a' tag and id's 
 - Use a unique `title` and unique `h1` tags
 - Show image using `img` tag including unique `alt` attribute
 - Use an external CSS stylesheet to style your pages
