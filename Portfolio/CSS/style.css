@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+}
+
+main {
+    height: 100%;
+}
+
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    min-height: 100%;
+    font-family: Lato, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color: #363636;
+}
+
+section {
+    padding: 50px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ---- Content Title - Left ----- */
+
+.content-title {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.content-title h1 {
+    font-family: 'Nothing You Could Do', cursive;
+    color: #2BC4D5;
+}
+
+
+
+
+
+/* --------- MAIN PAGE - HEADER -------- */
+
+header {
+    height: 100vh;
+}
+
+/* animation for background
+
+ -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    -webkit-mask-size: 7100% 100%;
+    mask-size: 7100% 100%;
+    -webkit-animation: ani2 3s steps(70) forwards;
+    animation: ani2 3s steps(70) forwards;
+    */
+
+
+
+/*
+#main-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/manyButterflies.png");
+    background-size: 100%;
+    background-position: center;
+    mix-blend-mode: screen;
+
+    -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    -webkit-mask-size: 7100% 100%;
+    mask-size: 7100% 100%;
+    -webkit-animation: ani2 3s steps(70) forwards;
+    animation: ani2 3s steps(70) forwards;
+
+*/
+
+
+
+
+
+.header-container {
+    background: url("../images/background.png") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: easeIn 2s;
+    background-attachment: fixed;
+}
+
+@keyframes easeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.header-menu-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    width: 500px;
+    height: 170px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+}
+
+.header-menu-container .header-contents {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.header-menu {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header-menu h1 {
+    position: relative;
+    font-size: 45px;
+    display: block;
+    padding-bottom: 2px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+
+/* -------Header Animation----- */
+
+@keyframes border {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes fadeIn {
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header-menu h1::after {
+    content: '';
+    display: block;
+    margin: auto;
+    top: 95%;
+    height: 1px;
+    width: 0px;
+    background: black;
+    -webkit-animation-name: border;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation: border 3s forwards;
+}
+
+.header-menu h1 span,
+.header-menu ul {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards,
+        slideIn 0.5s linear 1s forwards;
+    transform: translateY(-3px);
+}
+
+/* ------------------------- */
+
+.header-contents ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.header-contents li {
+    display: inline-flex;
+    padding: 5px 10px;
+}
+
+.header-menu a:hover {
+    color: #CB60A2;
+    transition: 0.3s;
+}
+
+/*---------- NavBar----------- */
+
+#navbar {
+    overflow: hidden;
+
+    background-color: white;
+    filter: drop-shadow(1px 1px 1px rgb(181, 181, 181));
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+}
+
+#navbar a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+}
+
+#navbar a:hover {
+    color: #CB60A2;
+}
+
+#navbar a:hover::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: #CB60A2;
+    opacity: 0.6;
+    animation: border 0.5s forwards;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: fade 0.2s ease-in forwards;
+    transform: translateY(-1px);
+}
+
+.sticky+section {
+    padding-top: 80px;
+}
+
+.hide #navbar {
+    display: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
+
+/* -------- Section 1 - About Me -------- */
+
+.about {
+    min-height: 500px;
+}
+
+.about-wrapper {
+    display: flex;
+    padding: 30px;
+    margin: 30px 0 30px 0;
+}
+
+.image-container img {
+    height: 450px;
+    max-width: 500px;
+    border-radius: 15px;
+    object-fit: contain;
+
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    z-index: -1;
+}
+
+.image-container::before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #363636;
+    border-width: 5px 3px 3px 5px;
+    border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    transform: rotate(2deg);
+}
+
+/*
+.image-mask {
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/background.png");
+    -webkit-mask-image: url("../images/monarch-butterfly-flat-icon-57925.png");
+    mask-image: url("../images/monarch-butterfly-flat-icon-57925.png");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-position: center;
+} */
+
+
+.aboutMe-text {
+    display: block;
+    padding: 10px 0 0 50px;
+}
+
+
+.aboutMe-text img {
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.aboutMe-text p {
+    margin-top: 10px;
+}
+
+.aboutMe-toolkit img {
+    height: 50px;
+    margin-bottom: 8px;
+
+}
+
+.aboutMe-toolkit h1,
+.aboutMe-text h2 {
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+.aboutMe-text img,
+.aboutMe-text h2 {
+    display: inline-block;
+    color: #F2DD87;
+}
+
+.aboutMe-toolkit ul {
+    list-style: none;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+
+}
+
+.aboutMe-toolkit li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.aboutMe-toolkit i {
+    font-size: 50px;
+}
+
+
+
+@media and screen(max-width:)
+/*--------- section 2 - work------ */
+
+.work {}
+
+.work-wrapper {
+    display: grid;
+    margin: 30px 0 30px 0;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 10px;
+}
+
+.work-box {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+
+/*-------Section 3 - Contact -------*/
+
+.contact {
+    background-color: #EEFBFC;
+}
+
+.contact-container {
+    text-align: end;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.contact-icons a {
+    color: #2BC4D5;
+}
+
+.contact-icons a:hover {
+    color: #6DE0D2;
+    cursor: pointer;
+}
+
+
+.contact-container p {
+    margin-bottom: 20px;
+}
+
+
+
+/* ------ Footer ------- */
+
+footer {
+    background-color: #2BC4D5;
+    color: white;
+
+
+    /*
+    -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    -webkit-mask-size: 7100% 100%;
+    mask-size: 7100% 100%;
+    -webkit-animation: ani2 3s steps(70) forwards;
+    animation: ani2 3s steps(70) forwards; */
+
+}
+
+.footer-text {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+@-webkit-keyframes ani {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes ani {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@-webkit-keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
+
+@keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
