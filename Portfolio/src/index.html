@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Merry Nguyen</title>
     <script src="https://kit.fontawesome.com/049e4e37f4.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="../CSS/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    
+
     <header id="main-page">
         <div class="header-container">
             <div class="header-menu-container">
@@ -36,109 +32,160 @@
         </div>
     </header>
     <div id="navbar">
+        <div id="icon" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-menu">
             <li class="nav-item"><a href="#main-page">HOME</a></li>
             <li class="nav-item"><a href="#section-1">ABOUT</a></li>
             <li class="nav-item"><a href="#section-2">WORK</a></li>
             <li class="nav-item"><a href="#section-3">CONTACT</a></li>
         </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
     </div>
     
     <main>
-        <section class="about" id="section-1">
-            <div class="content-title about-title">
-                <h1>About Me</h1>
-            </div>
-            <div class="about-wrapper">
-                <div class="image-container">
-                    <img src="../images/merry.jpg" alt="">
-                </div>
-                <div class="aboutMe-text">
-                    <h2>Hello!</h2> 
-                        <img src="../images/monarch-butterfly-flat-icon-57925.png" alt="butterfly"> 
-                    
-                    <p>I'm Merry. I'm a multidisciplinary developer based in Atlanta. 
-                        I have a passion for incorporating creativity into technology. I graduated
-                        from Kennesaw State University with a bachelors in computer science. I'm currently 
-                        taking a Front-End Development course with General Assembly to expand on my skills.</p>
 
-                        <p>When I'm not doing laptop things I like to color with color pencils. Or dominate 
-                        friends at arcade games.</p>
+        <section class="about" id="section-1">
+            <div data-aos="fade-up" data-aos-once="true" data-aos-duration="2000">
+                <div class="content-title about-title">
+                    <h1>About Me</h1>
                 </div>
-            </div>
-            <div class="aboutMe aboutMe-toolkit">
-                <h1>Toolkits</h1>
-                <ul>
-                    <li><i class="fab fa-brands fa-html5"></i>HTML5</li>
-                    <li><i class="fab fa-brands fa-css3-alt"></i>CSS3</li>
-                    <li><i class="fab fa-brands fa-js"></i>Javascript</li>
-                    <li><i class="fab fa-brands fa-python"></i>Python</li>
-                    <li><img src="../images/icons8-adobe-creative-cloud.svg" alt="adobe"/>Adobe Creative Cloud</li>
-                </ul>
-                
+                <div class="about-wrapper">
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="../images/merry.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="aboutMe-text">
+                        <h2>Hello World !</h2> 
+                        <p>I'm Merry. I'm a designer and developer based in Atlanta. I like to build beautiful 
+                            interactive user-friendly websites. I enjoy learning and experimenting with HTML, CSS, and JavaScript. 
+                            I studied art for a year and received a bachelors degree in computer science. 
+                            I want to use the combination of both experiences to create and design websites and applications 
+                            that are user-centric. I'm curious and love to take on new challenges which gives me the opportunity to stretch myself and test my limits. </p>
+                        <p>When I'm not on my computer, I like to color, go on long jogs, and work towards pursuing a second career in being the best pokemon trainer.</p>
+                    </div>
+                </div>
+            <div data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
+                <div class="aboutMe aboutMe-toolkit">
+                    <div class="content-title skills-title">
+                        <h1>Skills & Tools</h1>
+                    </div>
+                    <ul>
+                        <li><i class="fab fa-brands fa-html5"></i>HTML5</li>
+                        <li><i class="fab fa-brands fa-css3-alt"></i>CSS3</li>
+                        <li><i class="fa-brands fa-sass"></i>SASS</li>
+                        <li><i class="fa-brands fa-bootstrap"></i>Bootstrap</li>
+                        <li><i class="fab fa-brands fa-js"></i>Javascript</li>
+                        <li><i class="fab fa-brands fa-python"></i>Python</li>
+                        <li><i class="fa-brands fa-figma"></i>Figma</li>
+                        <li><img src="../images/adobeCreativeCloud.svg" alt="">Adobe Creative Cloud</li>
+                        <li><i class="fa-brands fa-jira"></i>Jira</li>
+                        <li><i class="fa-brands fa-github"></i>Github</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section class="work" id="section-2">
+        <section class="work" id="section-2" data-aos="fade-up" data-aos-once="true" data-aos-duration="2000">
             <div class="content-title work-title">
                 <h1>Work</h1>
             </div>
             <div class="work-wrapper">
-                <div class="work-box box-1"></div>
-                <div class="work-box box-2"></div>
-                <div class="work-box box-3"></div>
+                <div class="card box-1">
+                    <div class="work-img">
+                        <img src="../images/pomodoro.png" alt="timer">
+                    </div>
+                    <div class="work-details">
+                        <h3>Pomodoro Timer</h3>
+                        <p>A 25 minute timer to help you not procrastinate and stay focused on any task.</p>
+                        <ul class="work-tools">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Javascript</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card box-2">
+                    <div class="work-img">
+                        <img src="../images/mario.jpg" alt="mario and yoshi">
+                    </div>
+                    <div class="work-details">
+                        <h3>Mario Drawing</h3>
+                        <p>Made with color pencils</p>
+                        <ul class="work-tools"></ul>
+                    </div>
+                </div>
+                <div class="card box-3">
+                    <div class="work-img">
+                        <img src="../images/battleship.svg.png" alt="battleship">
+                    </div>
+                    <div class="work-details">
+                        <h3>Battleship</h3>
+                        <p>A javascript game of battleship</p>
+                        <ul class="work-tools">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Javascript</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="contact" id="section-3">
+        <section class="contact" id="section-3" data-aos="fade" data-aos-once="true">
             <div class="content-title contact-title">
                 <h1>Contact Me</h1>
             </div>
             <div class="contact-container">
-                <h1>Let's Connect!</h1>
-                <p>If you want to chat send me a message or follow me 
-                        on social media!</p>
+                <p>Hi, lets connect.</p>
+                <p>I'm open to new projects, work, and freelance inquiries. Or information on ways to earn more pokeballs.</p>
+                <form class="form-container" action="https://formsubmit.co/merryhang.n@gmail.com" method="POST">
+                    <div class="form name">
+                        <input type="text" name="name" class="form_input" autocomplete="off" placeholder=" ">
+                        <label for="name" class="form_label">Name</label>
+                    </div>
+                    <div class="form email">
+                        <input type="text" name="email" class="form_input" autocomplete="off" placeholder=" ">
+                        <label for="email" class="form_label">Email</label>
+                    </div>
+                    <div class="form message">
+                        <textarea name="message" class="form_input" cols="30" rows="4" placeholder=" "></textarea>
+                        <label for="message" class="form_label">Message</label>
+                    </div>
+                    <div class="submit-container">
+                        <button class="send" type="submit">Send Message</button>
+                    </div>
+                </form>
                 <div class="contact-icons">
                     <a href="https://www.linkedin.com/in/merry-nguyen9/"><i class="fab fa-linkedin"></i></a>
                     <a href="https://www.instagram.com/merryfullart/?hl=en"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/merryful"><i class="fab fa-github"></i></a>
+                    <a href="mailto:merryhang.n@gmail.com"><i class="fab fa-solid fa-envelope"></i></a>
                 </div> 
             </div>
         </section>
 
         <footer>
             <div class="footer-text">
-                <p>Created by Merry 🤍 </p>
+                <p>Created by Merry <i class="fa-regular fa-heart" style="padding-left: 2px;"></i></p>
             </div>
         </footer>
 
-
-
-
     </main>
-
     
-     
-
-
-
-
-
-
-
-
-
-
-
     <script src="../src/main.js"></script>
-     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    
 </body>
 </html>
