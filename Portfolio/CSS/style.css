@@ -135,6 +135,22 @@ header {
     font-weight: 500;
 }
 
+@media screen and (max-width: 440px) {
+    .header-container {
+        background: url("../images/background.png") center center no-repeat;
+        background-size: 121% 100%;
+    }
+    .header-menu h1 { 
+        font-size: 35px;
+    }
+    .header-contents ul {
+        font-size: 0.8rem;
+    }
+    .header-menu-container .header-contents {
+        margin: 10px 0;
+    }
+}
+
 /* -------Header Animation----- */
 
 @keyframes border {
